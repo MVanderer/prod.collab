@@ -1,0 +1,24 @@
+{
+  "name": "prod.collab",
+  "version": "1.0.0",
+  "description": "Demo Project to showcase Collab practices",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MVanderer/prod.collab.git"
+  },
+  "keywords": [
+    "git",
+    "version_control",
+    "flow"
+  ],
+  "author": "Vadim Flaks",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/MVanderer/prod.collab/issues"
+  },
+  "homepage": "https://github.com/MVanderer/prod.collab#readme"
+}

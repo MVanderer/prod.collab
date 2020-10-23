@@ -1,0 +1,8 @@
+-r ../requirements.txt
+Flask-Testing==0.4.2
+PyYAML==3.12
+coverage<5.0.0
+bandit
+mock
+pytest
+tox

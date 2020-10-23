@@ -1,0 +1,1 @@
+# A normal Makefile for a "NORMAL" OS (Unix)
