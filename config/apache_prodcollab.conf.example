@@ -1,0 +1,22 @@
+Listen 0.0.0.0:5001
+<VirtualHost 0.0.0.0:5001>
+    ServerName 0.0.0.0
+    CustomLog logs/prodcollab-access.log combined 
+    ErrorLog logs/prodcollab-error.log
+    # modify to use DIST_ROOT as defined in settings.py or prodcollab.yaml
+    Alias /dist /home/your_name/your_checkouts_dir/prod.collab/dist 
+    Header unset "Server"
+    <Directory /home/your_name/your_checkouts_dir/prod.collab/dist>
+        Options Indexes FollowSymlinks MultiViews IncludesNoExec
+        Require all granted
+    </Directory>
+    <Location />
+        # All other requests are proxied to the gunicorn instance
+        ProxyPass http://0.0.0.0:5005/ retry=1 acquire=3000 timeout=600 Keepalive=On
+        ProxyPassReverse http://0.0.0.0:5005/
+        Require all granted
+    </Location>
+    <LocationMatch "^/dist">
+        ProxyPass !
+    </LocationMatch>
+</VirtualHost>

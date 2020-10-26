@@ -1,0 +1,25 @@
+# PROD.COLLAB Database
+DB_NAME: "prodcollab"
+DB_USER: "prodcollab"
+DB_HOST: "127.0.0.0"
+DB_PORT: 5432
+
+# Celery / RabbitMQ
+BROKER_URL: 'amqp://guest:guest@localhost:5672'
+
+# SQLAlchemy Pool
+POOL_SIZE: 5
+MAX_OVERFLOW: 10
+
+# Reports Path
+REPORTS_PATH: '/var/lib/prodcollab/reports'
+
+# Flask settings
+HOST: '0.0.0.0'
+PORT: 5001
+TZINFO: 'US/Central'
+SECRET_KEY: 'development_key'
+DEBUG: False
+
+# Static files
+STATIC_ROOT: '/path/to/compiled/dist'
