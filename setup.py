@@ -18,7 +18,7 @@ setup(
     description="Demo Project to showcase Collab practices",
     long_description=README,
     keywords='prod, collab',
-    author='Vadim Flaks',
+    author='Denis Egorov',
     author_email='vadim.viktorovich.flaks@gmail.com',
     url='https://github.com/MVanderer/prod.collab',
     license='GNU GENERAL PUBLIC LICENSE',
